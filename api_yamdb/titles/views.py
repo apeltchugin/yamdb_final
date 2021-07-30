@@ -18,7 +18,7 @@ class TitlesViewSet(ModelViewSet):
         rating=Avg('reviews__score')).order_by('id')
     filter_backends = (DjangoFilterBackend, SearchFilter)
     permission_classes = [IsAuthenticatedOrReadOnly, IsAdminOrReadOnly]
-    filterset_class = TitleFilter
+    filterset_class = TitleFiltergit 
     pagination_class = PageNumberPagination
 
     def get_serializer_class(self):

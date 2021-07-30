@@ -9,6 +9,7 @@ router_v1.register(
     ReviewViewSet,
     basename='Review'
 )
+
 router_v1.register(
     r'titles/(?P<title_id>[0-9]+)/reviews/(?P<review_id>[0-9]+)/comments',
     CommentViewSet,

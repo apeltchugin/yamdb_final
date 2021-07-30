@@ -9,11 +9,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from .generate_code import generate_confirmation_code, send_mail_to_user
 from .models import User
 from .permissions import IsAdmin, IsSuperuser
-from .serializers import (
-    UserSerializer,
-    EmailSerializer,
-    CodeSerializer,
-)
+from .serializers import CodeSerializer, EmailSerializer, UserSerializer
 
 
 class RegisterView(APIView):

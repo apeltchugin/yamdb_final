@@ -3,7 +3,6 @@ from rest_framework.routers import DefaultRouter
 
 from reviews.views import CommentViewSet, ReviewViewSet
 
-
 router_v1 = DefaultRouter()
 
 router_v1.register(

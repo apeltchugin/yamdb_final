@@ -1,5 +1,6 @@
 from import_export import resources
-from .models import Review, Comment
+
+from .models import Comment, Review
 
 
 class ReviewResource(resources.ModelResource):

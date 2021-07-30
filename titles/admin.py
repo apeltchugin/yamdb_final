@@ -1,22 +1,17 @@
 from django.contrib import admin
-from import_export.admin import ImportMixin
+
 from titles.models import Category, Genre, Title
 
-from .resources import CategoryResource, GenreResource, TitleResource
 
-
-class CategoryAdmin(ImportMixin, admin.ModelAdmin):
-    resource_class = CategoryResource
+class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'slug')
 
 
-class GenreAdmin(ImportMixin, admin.ModelAdmin):
-    resource_class = GenreResource
+class GenreAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'slug')
 
 
-class TitleAdmin(ImportMixin, admin.ModelAdmin):
-    resource_class = TitleResource
+class TitleAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'year', 'description', 'category')
 
 

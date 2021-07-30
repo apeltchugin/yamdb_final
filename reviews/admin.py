@@ -1,17 +1,13 @@
 from django.contrib import admin
-from import_export.admin import ImportMixin
+
 from reviews.models import Comment, Review
 
-from .resources import CommentResource, ReviewResource
 
-
-class ReviewAdmin(ImportMixin, admin.ModelAdmin):
-    resource_class = ReviewResource
+class ReviewAdmin(admin.ModelAdmin):
     list_display = ('id', 'text', 'author', 'score', 'pub_date')
 
 
-class CommentAdmin(ImportMixin, admin.ModelAdmin):
-    resource_class = CommentResource
+class CommentAdmin(admin.ModelAdmin):
     list_display = ('id', 'text', 'author', 'pub_date')
 
 

@@ -1,5 +1,4 @@
 services:
-
   db:
     image: postgres:12.4
     volumes:
@@ -30,7 +29,7 @@ services:
     depends_on:
       - web
 
-volumes:
-  postgres_data:
-  static_value:
-  media_value:
+  volumes:
+    postgres_data:
+    static_value:
+    media_value:

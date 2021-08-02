@@ -1,5 +1,7 @@
 name: yamdb_final
 
+on: [push]
+
 jobs:
   tests:
     runs-on: ubuntu-latest

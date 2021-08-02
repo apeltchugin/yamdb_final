@@ -16,7 +16,6 @@ router_v1.register(
     basename='Comment'
 )
 
-
 urlpatterns = [
     path('v1/', include(router_v1.urls)),
 ]
